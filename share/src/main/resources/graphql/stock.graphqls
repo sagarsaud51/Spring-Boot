@@ -1,0 +1,19 @@
+type Stock{
+   id: ID!,
+   securityName: String,
+   securitySymbol: String,
+   companyName: String
+}
+
+
+type Query{
+  getStocksByCount(count: Int):[Stock]
+  getStockById(id:ID):Stock
+}
+
+
+
+type Mutation{
+  createStock(securityName: String,securitySymbol: String,companyName: String): Stock
+}
+
